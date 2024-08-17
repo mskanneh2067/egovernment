@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0d0c22;
+  --bgSoft: #2d2b42;
+  --text: white;
+  --textSoft: #e5e5e5;
+  --btn: #3673fd;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main-profile {
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.candidates {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  width:100%;
+  padding: 5px;
+  background-color: #002060;
+  padding: 5px;
+  gap: 2;
+  border: 1px solid white;
+  
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #f5f3f0;
+  position: relative;
+}
+
+
+
+.main-layout {
+  @apply w-full flex justify-center;
+}
+.navbar {
+  @apply fixed top-0 w-full px-5 h-16 flex  items-center justify-between text-[#002060] bg-white shadow-md;
+}
+.navitems {
+  @apply relative hidden md:flex md:items-center md:gap-2;
+}
+.navlink {
+  @apply relative  text-sm block md:flex md:items-center md:justify-center min-w-[67px] p-4 font-bold text-center px-16 h-16 ;
+}
+.active {
+  @apply bg-[var(--text)] border-b-2 border-b-[#002060] text-[#002060] ;
+}
+
+.mobile-menu {
+  @apply bg-white text-[#002060];
+}
+
